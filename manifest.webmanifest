@@ -1,0 +1,78 @@
+{
+  "name": "Sonora Música",
+  "short_name": "Sonora",
+  "description": "Música libre y gratis, sin anuncios, con playlists, me gusta y tu propia música. Funciona sin internet.",
+  "lang": "es-CO",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0D0A1C",
+  "theme_color": "#0D0A1C",
+  "categories": [
+    "music",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "iconos/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "iconos/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "iconos/icono-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Buscar",
+      "short_name": "Buscar",
+      "url": "./#buscar",
+      "icons": [
+        {
+          "src": "iconos/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Tu biblioteca",
+      "short_name": "Biblioteca",
+      "url": "./#biblioteca",
+      "icons": [
+        {
+          "src": "iconos/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "iconos/captura-escritorio.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Inicio de Sonora en el computador"
+    },
+    {
+      "src": "iconos/captura-celular.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Inicio de Sonora en el celular"
+    }
+  ]
+}

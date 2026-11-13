@@ -1,0 +1,75 @@
+SONORA - escribe una cancion y suena (estilo bot de Discord)
+============================================================
+
+COMO ABRIRLA
+------------
+1. Necesitas Node.js 22 o mas reciente (https://nodejs.org).
+2. Haz doble clic en "INICIAR SONORA.bat".
+3. Se abre una ventana negra (el servidor) y Sonora en el navegador,
+   en http://localhost:8787. Deja la ventana negra abierta mientras escuchas.
+
+La primera vez el servidor descarga yt-dlp (unos 20 MB) en servidor\bin.
+
+
+COMO SE USA
+-----------
+- En Inicio escribe una cancion y presiona Enter: Sonora la busca en YouTube,
+  elige el mejor video CON LETRA y reproduce solo el audio.
+- Shift + Enter la agrega a la cola en vez de ponerla ya.
+- Tambien entiende comandos de bot:  !play <cancion>   !cola <cancion>
+  !skip   !pausa   !sigue   !np (abre el reproductor)   !cola (abre la cola)
+- La tecla / te lleva a la caja de comandos desde cualquier pantalla.
+- En Buscar ves el mejor resultado y otras versiones para elegir.
+- Me gusta, playlists, cola, aleatorio, repetir y temporizador para dormir.
+- Tus propios MP3: boton "Subir" en Tu biblioteca (se guardan en datos\locales).
+
+
+POR QUE VIDEOS CON LETRA
+------------------------
+Los videos oficiales suelen traer intros, efectos o cortes distintos al disco.
+Los videos "lyrics" usan la pista de audio del disco. El buscador agrega
+"lyrics" a tu busqueda (si no lo escribiste), premia los titulos con
+Lyrics/Letra y castiga en vivo, covers, remix, karaoke, nightcore, sped up, etc.
+
+
+CACHE (para depender menos de YouTube)
+--------------------------------------
+- Busquedas: se guardan 14 dias en la base de datos (tabla cache_busquedas).
+  La misma busqueda la segunda vez es instantanea.
+- Enlace del audio: se guarda en memoria hasta que YouTube lo vence (unas horas).
+- Audio: cada cancion que suena se descarga a datos\cache-audio (maximo 2 GB;
+  se borran primero las que hace mas tiempo no escuchas). La segunda vez suena
+  al instante y sin pedir nada a YouTube.
+- La siguiente cancion de la cola se prepara mientras suena la actual.
+- Miniaturas: se guardan en datos\miniaturas.
+Todo se puede vaciar desde Ajustes.
+
+
+LA BASE DE DATOS
+----------------
+SQLite en datos\sonora.sqlite (se abre con DB Browser for SQLite).
+Esquema en base-de-datos\esquema.sql:
+  canciones .......... las que escuchaste, guardaste o subiste
+  playlists .......... tus playlists ('me-gusta' es la fija de Tus me gusta)
+  playlist_canciones . canciones de cada playlist, con su orden
+  reproducciones ..... historial por dia (Inicio muestra "Escuchado hoy")
+  cache_busquedas .... resultados de YouTube guardados
+
+
+SI ALGO DEJA DE SONAR
+---------------------
+YouTube cambia seguido. El servidor actualiza yt-dlp solo cada semana; si una
+cancion falla, ve a Ajustes > yt-dlp > Actualizar.
+
+Aviso: descargar audio de YouTube va contra sus terminos de servicio.
+Sonora esta pensada para uso personal en tu propio computador.
+
+
+ARCHIVOS
+--------
+  INICIAR SONORA.bat ...... abre el servidor y la app
+  servidor\servidor.js .... servidor local (app + API + audio)
+  servidor\youtube.js ..... busqueda y audio con yt-dlp
+  servidor\bd.js .......... base de datos SQLite
+  js\ ..................... la app (interfaz, reproductor, portadas)
+  datos\ .................. tu base de datos y la cache (no se sube a git)

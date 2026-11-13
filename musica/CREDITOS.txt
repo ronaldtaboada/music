@@ -1,0 +1,90 @@
+CREDITOS DE LA MUSICA DE SONORA
+================================
+
+Toda la musica de esta carpeta tiene licencia libre: sus autores permiten escucharla,
+copiarla y compartirla dando credito y conservando la misma licencia.
+Cambios realizados: se convirtio a MP3 y se igualo el volumen (-16 LUFS).
+
+FUENTES
+-------
+* 0 A.D. (Banda sonora)
+  Wildfire Games (wildfiregames.com)
+  23 canciones - Licencia: CC BY-SA 3.0
+  https://play0ad.com
+  Atribucion requerida: Wildfire Games - http://www.wildfiregames.com/
+  Licencia: http://creativecommons.org/licenses/by-sa/3.0/
+
+* The Battle for Wesnoth OST
+  Compositores de The Battle for Wesnoth (wesnoth.org)
+  12 canciones - Licencia: GNU GPL v2 o posterior,CC BY-SA 4.0
+  https://www.wesnoth.org
+
+* OpenClonk
+  Martin Strohmeier (K-Pone), OpenClonk (openclonk.org)
+  7 canciones - Licencia: CC BY 3.0
+  https://www.openclonk.org
+
+* Pioneer
+  Colaboradores de Pioneer Space Sim (pioneerspacesim.net)
+  7 canciones - Licencia: CC BY-SA 3.0
+  https://pioneerspacesim.net
+
+LICENCIAS
+---------
+* CC BY 3.0: https://creativecommons.org/licenses/by/3.0/deed.es
+* CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/deed.es
+* CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/deed.es
+* GNU GPL v2 o posterior: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+CANCION POR CANCION
+-------------------
+Archivo | Titulo | Autor | Album | Licencia | Archivo original
+honor-bound.mp3 | Honor Bound | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Honor_Bound.ogg
+juno-protect-you.mp3 | Juno Protect You | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Juno_Protect_You.ogg
+elysian-fields.mp3 | Elysian Fields | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Elysian_Fields.ogg
+mediterranean-waves.mp3 | Mediterranean Waves | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Mediterranean_Waves.ogg
+the-hellespont.mp3 | The Hellespont | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/The_Hellespont.ogg
+rise-of-macedon.mp3 | Rise of Macedon | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Rise_of_Macedon.ogg
+eastern-dreams.mp3 | Eastern Dreams | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Eastern_Dreams.ogg
+peaks-of-atlas.mp3 | Peaks of Atlas | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Peaks_of_Atlas.ogg
+forging-a-city-state.mp3 | Forging a City-State | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Forging_a_City-State.ogg
+land-between-two-seas.mp3 | Land Between the Two Seas | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Land_between_the_two_Seas.ogg
+sands-of-time.mp3 | Sands of Time | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Sands_of_Time.ogg
+celtic-pride.mp3 | Celtic Pride | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Celtic_Pride.ogg
+highland-mist.mp3 | Highland Mist | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Highland_Mist.ogg
+tavern-in-the-mist.mp3 | Tavern in the Mist | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Tavern_in_the_Mist.ogg
+calm-before-the-storm.mp3 | Calm Before the Storm | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Calm_Before_the_Storm.ogg
+waters-edge.mp3 | Water's Edge | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Water%27s_Edge.ogg
+sunrise.mp3 | Sunrise | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Sunrise.ogg
+mountain-idyll.mp3 | Mountain Idyll | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Mountain_Idyll.ogg
+along-the-nile.mp3 | Along the Nile | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Along_the_Nile.ogg
+taiko-2.mp3 | Taiko 2 | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Taiko_2.ogg
+albian-nocturne.mp3 | Albian Nocturne | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Albian_Nocturne.ogg
+8bit-bonus-track.mp3 | 8-Bit Bonus Track | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/0_8Bit_Bonus_Track.ogg
+karmic-confluence.mp3 | Karmic Confluence | Wildfire Games | 0 A.D. (Banda sonora) | CC BY-SA 3.0 | https://github.com/0ad/0ad/blob/HEAD/binaries/data/mods/public/audio/music/Karmic_Confluence.ogg
+breaking-the-chains.mp3 | Breaking the Chains | Mattias Westlund | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/breaking_the_chains.ogg
+journeys-end.mp3 | Journey's End | Mattias Westlund | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/journeys_end.ogg
+legends-of-the-north.mp3 | Legends of the North | Mattias Westlund | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/legends_of_the_north.ogg
+traveling-minstrels.mp3 | Traveling Minstrels | Mattias Westlund | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/traveling_minstrels.ogg
+silvan-sanctuary.mp3 | Silvan Sanctuary | Mattias Westlund | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/silvan_sanctuary.ogg
+return-to-wesnoth.mp3 | Return to Wesnoth | Mattias Westlund | The Battle for Wesnoth OST | CC BY-SA 4.0 | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/return_to_wesnoth.ogg
+heroes-rite.mp3 | Heroes Rite | Doug Kaufman | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/heroes_rite.ogg
+elvish-theme.mp3 | Elvish Theme | Doug Kaufman | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/elvish-theme.ogg
+still-another-wanderer.mp3 | Still Another Wanderer | Timothy Pinkham | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/wanderer.ogg
+love-theme.mp3 | Love Theme | Ryan Reilly | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/love_theme.ogg
+nunc-dimittis.mp3 | Nunc Dimittis | Jeremy Nicoll | The Battle for Wesnoth OST | GNU GPL v2 o posterior | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/nunc_dimittis.ogg
+three-sheets-to-the-wind.mp3 | Three Sheets to the Wind | Scott Buckley | The Battle for Wesnoth OST | CC BY-SA 4.0 | https://github.com/wesnoth/wesnoth/blob/HEAD/data/core/music/three-sheets.ogg
+crushed-ice-cocktail.mp3 | Crushed Ice Cocktail | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/%40CrushedIceCocktail.ogg
+island-dreams.mp3 | Island Dreams | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/IslandDreams.ogg
+lucid-dream.mp3 | Lucid Dream | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/LucidDream.ogg
+motorway.mp3 | Motorway | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/Motorway.ogg
+offshore.mp3 | Offshore | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/Offshore.ogg
+the-skylands.mp3 | The Skylands | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/TheSkylands.ogg
+urban-bolero.mp3 | Urban Bolero | K-Pone | OpenClonk | CC BY 3.0 | https://github.com/openclonk/openclonk/blob/HEAD/planet/Music.ocg/UrbanBolero.ogg
+floating.mp3 | Floating | Pioneer Space Sim | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/discovery/floating.ogg
+minuet-in-g.mp3 | Minuet in G | Pioneer Space Sim | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/near-spacestation/minuet.ogg
+waltz-in-a-minor.mp3 | Waltz in A Minor | Pioneer Space Sim | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/near-spacestation/waltz.ogg
+plazma-steel.mp3 | Plazma Steel | WKFO | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/ship-firing/plazma_steel.ogg
+space-groove.mp3 | Space Groove | s20dan & Redders | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/ship-firing/spacegroove.ogg
+techno-fugue.mp3 | Techno Fugue | WKFO & J. S. Bach | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/ship-firing/techno_fugue.ogg
+mars.mp3 | Mars | Gustav Holst & s20dan | Pioneer | CC BY-SA 3.0 | https://github.com/pioneerspacesim/pioneer/blob/HEAD/data/music/core/ship-nearby/mars.ogg

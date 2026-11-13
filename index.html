@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0D0A1C">
+<meta name="description" content="Sonora: escribe una canción y suena. Busca en YouTube (prefiere videos con letra), reproduce solo el audio y guarda tus playlists e historial.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sonora">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="64x64" href="iconos/favicon-64.png">
+<link rel="apple-touch-icon" href="iconos/apple-touch-icon.png">
+<link rel="preload" href="fuentes/outfit-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/figtree-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<title>Sonora Música</title>
+<link rel="stylesheet" href="css/sonora.css">
+</head>
+<body class="is-paused sin-cancion">
+<div id="app">
+  <!-- Barra lateral (escritorio) -->
+  <aside id="side" aria-label="Navegación principal">
+    <nav class="panel side-nav">
+      <div class="brand"></div>
+      <button class="side-link" data-act="tab" data-tab="home"><span data-icon="home"></span>Inicio</button>
+      <button class="side-link" data-act="tab" data-tab="search"><span data-icon="search"></span>Buscar</button>
+    </nav>
+    <section class="panel side-lib" aria-label="Tu biblioteca">
+      <header class="side-lib-head">
+        <button class="side-lib-title" data-act="tab" data-tab="library"><span data-icon="library"></span>Tu biblioteca</button>
+        <button class="icon-btn" data-act="import" aria-label="Subir canciones de tus archivos" title="Subir canciones"><span data-icon="upload"></span></button>
+        <button class="icon-btn" data-act="new-playlist" aria-label="Crear playlist" title="Crear playlist"><span data-icon="plus"></span></button>
+      </header>
+      <div class="chips" id="side-chips" role="tablist"></div>
+      <div class="side-list" id="side-list"></div>
+      <footer class="side-foot">
+        <button class="side-user" data-act="go" data-v="ajustes"><span data-icon="gear"></span><span>Ajustes e historial</span></button>
+      </footer>
+    </section>
+  </aside>
+
+  <main id="main" tabindex="-1"><div class="wrap" id="view"></div></main>
+
+  <!-- Barra de reproducción (escritorio) -->
+  <footer id="bar" aria-label="Reproductor">
+    <div class="bar-left">
+      <button class="bar-art" data-act="open-player" aria-label="Abrir reproductor"><img class="js-cover" data-px="56" alt=""></button>
+      <div class="bar-meta"><button class="js-title bar-t" data-act="open-player"></button><button class="js-artist bar-a" data-act="player-artist"></button></div>
+      <button class="icon-btn js-like" data-act="like-current" aria-label="Me gusta"></button>
+    </div>
+    <div class="bar-center">
+      <div class="bar-ctrls">
+        <button class="icon-btn sm js-shuffle" data-act="shuffle" aria-label="Aleatorio"><span data-icon="shuffle"></span></button>
+        <button class="icon-btn" data-act="prev" aria-label="Canción anterior"><span data-icon="prev"></span></button>
+        <button class="play-big js-play" data-act="toggle" aria-label="Reproducir"></button>
+        <button class="icon-btn" data-act="next" aria-label="Siguiente canción"><span data-icon="next"></span></button>
+        <button class="icon-btn sm js-repeat" data-act="repeat" aria-label="Repetir"></button>
+      </div>
+      <div class="bar-seek"><span class="js-cur tnum">0:00</span><input class="js-range" type="range" min="0" max="1000" step="1" value="0" aria-label="Posición en la canción"><span class="js-dur tnum">0:00</span></div>
+    </div>
+    <div class="bar-right">
+      <button class="icon-btn sm js-sleep" data-act="sleep" aria-label="Temporizador para dormir" title="Temporizador"><span data-icon="moon"></span></button>
+      <button class="icon-btn sm" data-act="open-queue" aria-label="Cola" title="Cola"><span data-icon="queue"></span></button>
+      <button class="icon-btn sm" id="b-vol-ico" data-act="mute" aria-label="Silenciar"></button>
+      <input id="b-vol" class="vol" type="range" min="0" max="100" step="1" value="100" aria-label="Volumen">
+      <button class="icon-btn sm" data-act="open-player" aria-label="Pantalla completa" title="Pantalla completa"><span data-icon="expand"></span></button>
+    </div>
+  </footer>
+
+  <!-- Mini reproductor y pestañas (celular) -->
+  <div id="mini" role="button" tabindex="0" aria-label="Abrir reproductor" data-act="open-player">
+    <img class="js-cover" data-px="42" alt="">
+    <div class="mt"><div class="t1 js-title"></div><div class="t2 js-artist"></div></div>
+    <button class="icon-btn js-like" data-act="like-current" aria-label="Me gusta"></button>
+    <button class="icon-btn play-btn js-play" data-act="toggle" aria-label="Reproducir"></button>
+    <div class="prog"><i class="js-prog"></i></div>
+  </div>
+  <nav id="tabs" aria-label="Secciones"><div class="in">
+    <button class="tab" data-act="tab" data-tab="home"><span data-icon="home"></span>Inicio</button>
+    <button class="tab" data-act="tab" data-tab="search"><span data-icon="search"></span>Buscar</button>
+    <button class="tab" data-act="tab" data-tab="library"><span data-icon="library"></span>Tu biblioteca</button>
+  </div></nav>
+
+  <!-- Reproductor a pantalla completa -->
+  <section id="player" class="sheet" role="dialog" aria-modal="true" aria-label="Reproductor" aria-hidden="true">
+    <div class="p-amb" aria-hidden="true"><img class="js-cover" data-px="96" alt=""></div>
+    <div class="p-in">
+      <div class="p-top">
+        <button class="icon-btn" data-act="close-player" aria-label="Cerrar reproductor"><span data-icon="down"></span></button>
+        <div class="p-from"><small>Reproduciendo desde</small><strong id="p-from"></strong></div>
+        <button class="icon-btn" data-act="player-menu" aria-label="Más opciones"><span data-icon="more"></span></button>
+      </div>
+      <div class="p-body">
+        <div class="p-art"><img class="js-cover" data-px="420" alt=""></div>
+        <div class="p-side">
+          <div class="p-meta">
+            <div class="mt"><div class="p-title js-title"></div><button class="p-artist js-artist" data-act="player-artist"></button></div>
+            <button class="icon-btn js-like" data-act="like-current" aria-label="Me gusta"></button>
+          </div>
+          <div class="p-seek">
+            <input class="js-range" type="range" min="0" max="1000" step="1" value="0" aria-label="Posición en la canción">
+            <div class="p-times"><span class="js-cur">0:00</span><span class="js-dur">0:00</span></div>
+          </div>
+          <div class="p-ctrls">
+            <button class="icon-btn sm js-shuffle" data-act="shuffle" aria-label="Aleatorio"><span data-icon="shuffle"></span></button>
+            <button class="icon-btn" data-act="prev" aria-label="Canción anterior"><span data-icon="prev"></span></button>
+            <button class="play-big xl js-play" data-act="toggle" aria-label="Reproducir"></button>
+            <button class="icon-btn" data-act="next" aria-label="Siguiente canción"><span data-icon="next"></span></button>
+            <button class="icon-btn sm js-repeat" data-act="repeat" aria-label="Repetir"></button>
+          </div>
+          <div class="p-extra">
+            <button id="p-sleep" data-act="sleep"><span data-icon="moon"></span><span id="p-sleep-l">Temporizador</span></button>
+            <button data-act="yt-current"><span data-icon="yt"></span>YouTube</button>
+            <button data-act="open-queue"><span data-icon="queue"></span>Cola</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cola -->
+  <section id="queue" class="sheet" role="dialog" aria-label="Cola de reproducción" aria-hidden="true">
+    <div class="q-in">
+      <div class="q-head"><h2>Cola</h2><button class="icon-btn" data-act="close-queue" aria-label="Cerrar cola"><span data-icon="down"></span></button></div>
+      <div id="q-body"></div>
+    </div>
+  </section>
+
+  <div id="scrim" data-act="close-sheet"></div>
+  <div id="sheet" role="dialog" aria-modal="true" aria-hidden="true"></div>
+  <div id="dialog" aria-hidden="true"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Pantalla de carga y bienvenida -->
+  <div id="splash" class="show cargando">
+    <div class="splash-body"><div class="loader"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#FFB547"/><rect x="8.5" y="12" width="3.2" height="8" rx="1.6" fill="#241500"/><rect x="14.4" y="8" width="3.2" height="16" rx="1.6" fill="#241500"/><rect x="20.3" y="10.5" width="3.2" height="11" rx="1.6" fill="#241500"/></svg><span>Conectando con Sonora…</span></div></div>
+  </div>
+</div>
+<audio id="audio" preload="auto"></audio>
+<input id="filepick" type="file" accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.opus,.flac" multiple hidden>
+<noscript><p style="padding:24px;color:#fff;font-family:sans-serif">Sonora necesita JavaScript activado.</p></noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

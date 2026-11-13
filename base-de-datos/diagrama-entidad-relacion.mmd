@@ -1,0 +1,89 @@
+erDiagram
+    USUARIOS ||--o{ PLAYLISTS : "crea"
+    USUARIOS ||--o{ ME_GUSTA : "marca"
+    USUARIOS ||--o{ REPRODUCCIONES : "escucha"
+    USUARIOS |o--o{ CANCIONES : "sube"
+    ARTISTAS ||--o{ CANCIONES : "interpreta"
+    ARTISTAS |o--o{ ALBUMES : "publica"
+    ALBUMES |o--o{ CANCIONES : "contiene"
+    LICENCIAS |o--o{ CANCIONES : "rige"
+    CANCIONES ||--o{ CANCION_GENEROS : "tiene"
+    GENEROS ||--o{ CANCION_GENEROS : "clasifica"
+    PLAYLISTS ||--o{ PLAYLIST_CANCIONES : "incluye"
+    CANCIONES ||--o{ PLAYLIST_CANCIONES : "aparece en"
+    CANCIONES ||--o{ ME_GUSTA : "recibe"
+    CANCIONES ||--o{ REPRODUCCIONES : "registra"
+
+    USUARIOS {
+        int id PK
+        text nombre
+        text creado_en
+    }
+    ARTISTAS {
+        int id PK
+        text clave UK
+        text nombre
+        text biografia
+        text paleta
+    }
+    ALBUMES {
+        int id PK
+        text clave UK
+        text titulo
+        int artista_id FK
+        text anio
+        text descripcion
+        text sitio_web
+    }
+    GENEROS {
+        int id PK
+        text clave UK
+        text nombre
+        text color
+    }
+    LICENCIAS {
+        text id PK
+        text nombre
+        text url
+    }
+    CANCIONES {
+        int id PK
+        text clave UK
+        text titulo
+        int artista_id FK
+        int album_id FK
+        real duracion_seg
+        text archivo
+        text licencia_id FK
+        int es_local
+        int subida_por FK
+    }
+    CANCION_GENEROS {
+        int cancion_id PK,FK
+        int genero_id PK,FK
+    }
+    PLAYLISTS {
+        int id PK
+        int usuario_id FK
+        text nombre
+        text descripcion
+        text actualizado_en
+    }
+    PLAYLIST_CANCIONES {
+        int playlist_id PK,FK
+        int cancion_id PK,FK
+        int posicion
+    }
+    ME_GUSTA {
+        int usuario_id PK,FK
+        int cancion_id PK,FK
+        text creado_en
+    }
+    REPRODUCCIONES {
+        int id PK
+        int usuario_id FK
+        int cancion_id FK
+        text contexto
+        int segundos
+        text reproducido_en
+    }

@@ -1,0 +1,5 @@
+# Datos locales de Sonora (base SQLite, caché de audio y miniaturas, archivos subidos)
+datos/
+# yt-dlp se descarga solo al iniciar el servidor
+servidor/bin/
+.playwright-mcp/

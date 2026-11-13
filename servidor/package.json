@@ -1,0 +1,8 @@
+{
+  "name": "sonora-servidor",
+  "private": true,
+  "type": "module",
+  "description": "Servidor local de Sonora: app, API, búsqueda en YouTube con yt-dlp y base SQLite.",
+  "engines": { "node": ">=22.13" },
+  "scripts": { "start": "node servidor.js" }
+}
